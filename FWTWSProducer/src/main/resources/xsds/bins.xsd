@@ -1,0 +1,30 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.finwintech.com/bin-ws" elementFormDefault="qualified">
+
+    <xsd:element name="GetBinInfoRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="bin_number" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="GetBinInfoResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="bin_number" type="xsd:string"/>
+                <xsd:element name="card_type" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="card_level" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="card_brand" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="bank_issuing" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="bank_country_name" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="bank_country_two_alpha_code" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="bank_country_three_alpha_code" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="bank_country_three_numeric_code" minOccurs="0" type="xsd:string"/>
+                <xsd:element name="bin_groups" type="xsd:string"/>
+                <xsd:element name="blocked" type="xsd:int"/>
+                <xsd:element name="error" type="xsd:integer"/>
+                <xsd:element name="message" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
